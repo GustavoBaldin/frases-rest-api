@@ -19,12 +19,7 @@ public class FrasesController {
 
     @GetMapping("/series/frases")
     public Frases retornarFrases() {
-        List<Frases> frases = service.gerarFrases();
-
-        Random random = new Random();
-        int randomIndex = random.nextInt(frases.size());
-
-        return ResponseEntity.ok(frases.get(randomIndex)).getBody();
+        return ResponseEntity.ok(service.gerarFrase()).getBody();
     }
 
 }

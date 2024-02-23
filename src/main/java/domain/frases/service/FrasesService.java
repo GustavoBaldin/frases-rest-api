@@ -13,8 +13,8 @@ public class FrasesService {
     @Autowired
     private FrasesRepository repository;
 
-    public List<Frases> gerarFrases() {
-        return repository.findAll();
+    public Frases gerarFrase() {
+        return repository.buscarFraseAleatoria();
     }
 
 }
